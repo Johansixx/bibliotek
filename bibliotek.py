@@ -27,9 +27,6 @@ while choice != 0:
         price = input("Pris: ")
         year = input("År: ")
 
-        #book = Book(titel, author, pages, year, price)
-        #book.add_book(titel, author, pages, price, year)
-        # My_library = Book(titel, author, pages, year, price)
         My_library.add_book(titel, author, pages, year, price)
 
     elif choice == 2:
