@@ -68,4 +68,3 @@ while choice != 0:
 
     #6book_ett = Lib.add_book("Bilbo", "Tolkien", 1000, 1900, 250, 1)
     # titel, author, pages, year, price
-'''
