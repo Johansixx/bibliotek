@@ -1,16 +1,16 @@
-from lib import Lib, Book, Movie, Cd
+from Libraryclass import Lib, Book, Movie, Cd
 
 
-My_library = Lib("titel", "price")
+My_library = Lib("", "")
 
 
 def print_choices():
     print("""\n Välj vilken typ av media du vill lägga till i bibloteket: \n
-    1. Lägg till en bok?
-    2. Lägg till en film ?
-    3. lägg till en cd-skiva ?
-    4. Kolla i bibloteket  ?
-    0. Avsluta programmet """)
+    1.Vill du lägga till en bok?
+    2.Vill du lägga till en film ?
+    3.Vill du lägga till en cd-skiva ?
+    4.Vill du kolla i bibloteket  ?
+    0.Vill du avsluta programmet """)
 
 
 print_choices()
@@ -20,36 +20,38 @@ choice = int(input("entar a number: "))
 
 while choice != 0:
     if choice == 1:
-        print("vänligen ange titel, författare, sidor, pris, året boken kom ut?")
-        titel = input("Titel: ")
+        print("vänligen ange title, författare, sidor, pris, år")
+        title = input("title: ")
         author = input("Författare: ")
         pages = input("Sidor: ")
         price = input("Pris: ")
         year = input("År: ")
 
-        My_library.add_book(titel, author, pages, year, price)
+        # Book(title, author, pages, year, price)
+        # Book.add_book()
+        My_library.add_book(title, author, pages, year, price)
 
     elif choice == 2:
-        print("Vänligen ange Titel, regissör, Längd på filmen, Pris och årtal")
-        titel = input("Titel: ")
+        print("Vänligen ange title, regissör, Längd på filmen, Pris och årtal")
+        title = input("title: ")
         director = input("Regissör: ")
         lenght = input("Längd: ")
         price = input("Pris: ")
         year = input("Årtal: ")
 
-        movie = Movie(titel, price)
-        movie.add_movie(titel, director, lenght, year, price)
+        movie = Movie(title, price)
+        movie.add_movie(title, director, lenght, year, price)
 
     elif choice == 3:
-        print("Vänligen ange Titel, Artist, Hur många låtar?, Längden, Pris ")
-        titel = input("Titel: ")
+        print("Vänligen ange title, Artist, Hur många låtar?, Längden, Pris ")
+        title = input("title: ")
         artist = input("Artist: ")
         tracks = input("Låtar: ")
         lenght = input("Längd: ")
         price = input("Pris: ")
 
-        cd = Cd(titel, price).add_cd
-        cd.add_cd(titel, artist, tracks, lenght, price)
+        cd = Cd(title, price).add_cd
+        cd.add_cd(title, artist, tracks, lenght, price)
 
     elif choice == 4:
         My_library.print_books()
@@ -63,5 +65,5 @@ while choice != 0:
     print_choices()
     choice = int(input("entar a number: "))
 
-    #6book_ett = Lib.add_book("Bilbo", "Tolkien", 1000, 1900, 250, 1)
-    # titel, author, pages, year, price
+    # 6book_ett = Lib.add_book("Bilbo", "Tolkien", 1000, 1900, 250, 1)
+    # title, author, pages, year, price
