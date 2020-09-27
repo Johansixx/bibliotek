@@ -1,0 +1,2 @@
+ctr + shift + p = command pallete 
+linter = det som formaterar kod snyggt (flake8) 
