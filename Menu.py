@@ -10,7 +10,6 @@ def print_choices():
 2. Vill du lägga till en film ?
 3. Vill du lägga till en cd-skiva ?
 4. Vill du kolla i bibloteket  ?
-5. Vill du spara allt du har lagt in till en fil ?
 0. Vill du avsluta programmet """)
 
 
@@ -68,10 +67,6 @@ while choice != 0:
         print(str("Movies = ") + str(movies))
         movie_value(movies)
 
-        
-    elif choice == 5:
-        pass
-
     elif choice == 0:
         exit()
 
@@ -82,4 +77,4 @@ while choice != 0:
 
     print_choices()
 
-    choice = int(input("entar a number: "))
+    choice = int(input("Gör ett val: "))
