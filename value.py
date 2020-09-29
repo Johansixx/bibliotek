@@ -1,11 +1,7 @@
-import datetime
 import json
 
-today = datetime.datetime.today()
-# current_year = datetime.datetime.current_year()
-
-
 def books_value(content):
+    print("Books:")
     for item in content:
         purchase_year = item["purchase_year"]
         price = int(item["price"])
@@ -29,6 +25,7 @@ def books_value(content):
 
 
 def cd_value(content):
+    print("CDs:")
     for item in content:
         title = item["title"]
         artist = item["artist"]
@@ -44,12 +41,14 @@ def cd_value(content):
         print(str("\n"))
         return item
 
+
 def movie_value(content):
+    print("Movies:")
     for item in content:
         title = item["title"]
         director = item["director"]
         purchase_year = item["purchase_year"]
-        price = int(item["item"])
+        price = int(item["price"])
         condition = item["condition"]
         if condition == 10:
             price = price
@@ -58,8 +57,8 @@ def movie_value(content):
             price = price * condition
         print(str("Tittel: ") + item["title"])
         print(str("pris: ") + str(price))
-        print(str("director: ") + item["dircetor"])
-        print(str("purchase_year: ") + item["purchase_year"])
-        print(str( "condition: ") + item["condition"])
+        print(str("director: ") + str(item["director"]))
+        print(str("purchase_year: ") + str(item["purchase_year"]))
+        print(str("condition: ") + str(item["condition"]))
         print(str("\n"))
-        
+        return item

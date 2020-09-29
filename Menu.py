@@ -26,9 +26,7 @@ while choice != 0:
         pages = int(input("Sidor: "))
         price = float(input("Pris: "))
         purchase_year = int(input("Inköpsår: "))
-
         My_library.add_book(title, author, pages, purchase_year, price)
-
 
     elif choice == 2:
         print("""Vänligen ange Titel, regissör, Längd på filmen, Pris,Inköpsår och skick""")
@@ -56,16 +54,17 @@ while choice != 0:
         libraryjson = json.load(libraryfile)
 
         books = libraryjson["books"]
-        print(str("Books = ") + str(books))
+        #print(str("Books = ") + str(books))
         books_value(books)
 
         cds = libraryjson["cds"]
-        print(str("CD's = ") + str(cds))
+        #print(str("CD's = ") + str(cds))
         cd_value(cds)
 
         movies = libraryjson["movies"]
-        print(str("Movies = ") + str(movies))
+        #print(str("Movies = ") + str(movies))
         movie_value(movies)
+
 
     elif choice == 0:
         exit()

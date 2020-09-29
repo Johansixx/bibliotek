@@ -42,7 +42,7 @@ class Lib:
 		"title": title,
 		"artist": artist,
         "tracks": tracks,
-		"": length,
+		"length": length,
         "price": price,
         }
 
@@ -61,9 +61,9 @@ class Lib:
 
         movie = {
 		"title": title,
-		"artist": director,
-        "tracks": length,
-		"length": purchase_year,
+		"director": director,
+		"length": length,
+        "purchase_year": purchase_year,
         "price": price,
         "condition": condition,
         }
